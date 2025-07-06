@@ -179,3 +179,26 @@ export default function UploadMedia({ name, onUpload }: UploadMediaProps) {
     </>
   );
 }
+
+// const methods = useForm<{ photos: string[] }>();
+// const handleUpload = async (formData: FormData): Promise<string[] | void> => {
+//   console.log(formData);
+//   // const res = await uploadFile(formData).unwrap();
+
+//   // return res?.success ? res?.data?.images : [];
+// };
+// const onSubmit = (data: { photos: string[] }) => {
+//   console.log("Uploaded URLs:", data.photos);
+// };
+
+// <FormProvider {...methods}>
+//   <form onSubmit={methods.handleSubmit(onSubmit)} className="p-6">
+//     <UploadMedia name="photos" onUpload={handleUpload} />
+//     <button
+//       type="submit"
+//       className="mt-6 bg-blue-600 text-white px-4 py-2 rounded"
+//     >
+//       Submit
+//     </button>
+//   </form>
+// </FormProvider>;
