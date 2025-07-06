@@ -66,21 +66,6 @@ body {
   z-index: 2;
 }
 
-.ant-tabs-nav-wrap .ant-tabs-nav-list {
-  background-color: #eef9fb;
-  padding: 16px;
-}
-
-.ant-tabs-tab.ant-tabs-tab-active {
-  background-color: #58c0d7;
-  padding: 16px;
-  border-radius: 5px;
-  color: white !important;
-}
-.ant-tabs-tab.ant-tabs-tab-active.ant-tabs-tab-btn {
-  color: white !important;
-}
-
 /* Slim Scrollbar Styling */
 .slim-scroll::-webkit-scrollbar {
   width: 5px;
@@ -205,3 +190,95 @@ body {
   background-color: #eef9fb;
   border-radius: 6px;
 }
+
+/* ***************************************************************************************** */
+/* loader css  */
+/* HandLoader.css */
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 112px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.finger {
+  width: 20px;
+  height: 100%;
+  margin-right: 2px;
+  background: #fff;
+  border-radius: 6px 6px 8px 8px;
+  position: relative;
+}
+
+.finger-item span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 5px 5px 0 5px;
+}
+
+.finger-item span::before,
+.finger-item span::after {
+  content: "";
+  display: block;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 2px;
+  background: #4492f4;
+}
+
+.finger-item i {
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  width: 14px;
+  height: 14px;
+  background: #4492f4;
+  border-radius: 10px 10px 7px 7px;
+}
+
+.last-finger {
+  width: 24px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.last-finger-item {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 110%;
+  height: 20px;
+  background: #fff;
+  border-radius: 0 5px 14px 0;
+  animation: finger-5-animation 2s infinite linear;
+}
+
+.last-finger-item i {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 22px;
+  height: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.last-finger-item i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34px;
+  height: 20px;
+  border-radius: 0 0 15px 15px;
+  background: #4492f4;
+}
+
+/* You can paste the finger animations here too (like @keyframes finger-1-animation, etc.) */
